@@ -1,0 +1,182 @@
+body{
+    width: 100%;
+    /*La altura de las cajas izquierda y derecha va a ser de 400px. 
+    Tienes que poner altura al body.
+    Este es el enunciado pues la altura total del body seria 400px de las 
+    cajas + 100 px del footer+ 45px de margin superior + 50 px del nav*/
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    background-color: #b0e5ff;
+}
+#cabecera{
+    background-color: #3d6a85;
+    height: 7.7519379844961240310077519379845vh; /*50px sobre 645px*/
+    text-align: center;
+}
+#cabecera>h1{
+    margin: 0;
+    color: #b0e5ff;
+}
+#navEnlaces{
+    background-color: #5aa1cd;
+    height: 7.7519379844961240310077519379845vh; /*50px sobre 645px*/
+    padding: 0 1.5873015873015873015873015873016%; /*Un poco de padding lateral para que no se peguen los enlaces al borde*/
+    text-align: center;
+}
+#navEnlaces{
+    a{
+        line-height: 7.7519379844961240310077519379845vh; /*50px sobre 645px*/
+        text-decoration: none;
+        color: #b0e5ff;
+    }
+    a:hover{
+        color: #3d6a85;
+        background-color: #b0e5ff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    #inicio{
+        float: right;
+    }
+    #cajabotones{
+        width: 31.746031746031746031746031746032%; /*400px sobre 1260px*/
+        float: left;
+    }
+    #boton1{
+        float: left;
+    }
+    #boton2{
+        float: right;
+    }
+}
+section{
+    margin-top: 6.976744186046511627906976744186vh; /*45px sobre 645px*/ /*Esta separacion con el nav no se si es necesaria pero como he visto 45px encima de la caja he intuido eso*/
+    height: 62.015503875968992248062015503876vh; /*400px sobre 645*/
+}
+.separador{
+    float: left;
+    width: 1.5873015873015873015873015873016%; /*20px sobre 1260*/
+    height: 62.015503875968992248062015503876vh; /*400px sobre 645*/
+    background-color: #172c38;
+}
+
+#cajaGrande{
+    float: left;
+    width: 61.904761904761904761904761904762%; /*780px sobre 1260*//*800-20 de padding*/
+    height: 62.015503875968992248062015503876vh; /*400px sobre 645*/
+    padding: 0 0.79365079365079365079365079365079%; /*10px sobre 1260px*/
+    overflow: hidden;
+    background-color: #5aa1cd;
+}
+#cajaChica{
+    float: left;
+    width: 31.746031746031746031746031746032%; /*400px sobre 1260*/
+    height: 62.015503875968992248062015503876vh; /*400px sobre 645*/
+    overflow: hidden;
+    background-color: #5aa1cd;
+}
+#piePagina{
+    background-color: #3d6a85;
+    height: 15.503875968992248062015503875969vh; /*100px sobre 645px*/
+    clear: both;
+}
+#piePagina{
+    p{
+        color: #b0e5ff;
+        margin: 0;
+    }
+}
+#parrafo{
+    margin-top: 4.6511627906976744186046511627907vh; /*30px sobre 645px*/
+    width: 100%; /*780px sobre 800*//*800 px del contenedor - 20 px de padding lateral*/
+    text-align: justify;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#parrafo{
+    div{
+        background-color: #65caff;
+    }
+}
+#formulario{
+    width: 100%; /*780px sobre 800*/
+    margin-top: 4em; /*4 veces el tamaño de letra*/
+    background-color: #65caff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#formulario{
+    div{
+        padding: 1em 8.974358974358974358974358974359%; /*70px sobre 780*//*1 em el tamaño de letra*/
+    }
+}
+#formulario>div{
+    input{
+        display: block;
+        padding-left: 2%; /*10px sobre 500*/
+        width: 62.820512820512820512820512820513%; /*490px sobre 780*//*500px -10 de padding izquierdo*/
+        height: 3.1007751937984496124031007751938vh;
+        margin-bottom: 1.5503875968992248062015503875969vh; /*10px sobre 645*/
+        }
+    button{
+        width: 19.230769230769230769230769230769%; /*150 sobre 780px*/
+        height: 2em;
+        background-color: #D8D8D8;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        margin-left: 21.794871794871794871794871794872%; /*170px sobre 780*//*Para sacar esta medida he restado a 500px lo que mida el  boton y lo he dividido entre 2*/
+    }
+}
+#imgIntro{
+    width: 37.5%; /*150px sobre 400*/
+    margin-top: 7.7519379844961240310077519379845vh; /*50px sobre 645*/
+    margin-left: 7.5%; /*30px sobre 400*/
+}
+#imgIntro{
+    img{
+        width: 100%; /*150px sobre 150*/
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        height: auto; /*El alto auto para que no pierda calidad*/
+    }
+}
+main{
+    background-color: red;
+}
+@media (max-width: 768px) { 
+    /*- Les he tenido que dar margin 0 a todos los section por que al quitarle el flotamiento vuelven al flujo y les aparece el margen por defecto
+    - Las alturas son automaticas para que se ajusten y no quede hueco entre un section y otro
+    - He roto el flotamiento para que se coloquen los section como bloques uno debajo de otro y los bloques ocupen el ancho de la pantalla para ser mas visible
+    -Le he dado un poco de padding a la caja grande para que se vea mejor
+    -A la caja de la image lo mismo para que se quede mejor visualmente y no se queden pegados a los lados*/
+    section{
+        margin: 0;
+    }
+    .separador{
+        float: none;
+        width: 100%;
+        height: 1.5873015873015873015873015873016vh;
+    }
+    #separador1{
+        margin: 5.85vh 0 0 0; /*45px sobre 694 para mantener el aspecto anterior*/
+    }
+    #cajaGrande{
+        float: none;
+        width: 97%;
+        height: auto;
+        padding: 1.5vh 1.5%; 
+    }
+    #cajaChica{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    
+    #imgIntro{
+        padding: 1.5vh 1.5%;
+        margin: 0;
+    }
+    /*Aqui he ajustado la caja de botones para que se vean todos los enlaces en el nav*/
+    #navEnlaces{
+        #cajabotones{
+            width: 69.3%; /*260px sobre 375*/
+        }
+    }
+}
